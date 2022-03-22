@@ -1,0 +1,529 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --finance-color: #b10051;
+  --darker-color: #a30047;
+  --lighter-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --code-color: #333;
+}
+body {
+  color: black;
+}
+.bg-primary {
+  background-color: var(--finance-color) !important;
+  color: white;
+}
+.bg-light {
+  background-color: var(--lighter-color);
+  color: #333;
+}
+a {
+  color: black;
+  text-decoration:none !important;
+}
+a:-webkit-any-link {
+  text-decoration:none !important;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+h1 {
+  line-height: 1.2;
+  margin: 10px 0;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-weight: bold;
+}
+.xg {
+  font-size: 4rem;
+}
+.lg {
+  font-size: 3rem;
+}
+.mg {
+  font-size: 2rem;
+}
+.sg {
+  margin: 1rem 0;
+  font-size: 20px;
+}
+.text-center {
+  text-align: center;
+}
+.text-primary {
+  color: var(--finance-color);
+}
+.text-primary:hover {
+  color: var(--finance-color);
+}
+.text-secondary {
+  color: var(--finance-color);
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.features-main .card > i {
+  margin-right: 20px;
+}
+.features-main .card {
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  padding: 20px;
+  margin: 10px;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.features-main .grid {
+  padding: 30px;
+}
+.features-main .grid > *:first-child {
+  grid-column: 1 / span 3;
+}
+.features-main .grid > *:nth-child(2) {
+  grid-column: 1 / span 2;
+}
+.navbar-menu {
+  background-color: var(--finance-color);
+  color: white !important;
+}
+.navbar-menu a {
+  text-align: center;
+  color: white;
+}
+.navbar-menu a:hover {
+  color: rgb(160, 160, 160);
+}
+// Contact form
+
+.column {
+  padding: 0.5rem !important;
+}
+.columns {
+  align-items: center !important;
+}
+.showcase {
+  height: 400px;
+  background-color: var(--finance-color);
+  color: white;
+  position: relative;
+}
+.showcase p {
+  margin: 20px 0;
+}
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background-color: white;
+  transform: skewY(-2deg);
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+}
+.showcase-form {
+  color: black;
+  position: relative;
+  top: 60px;
+  left: 10%;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+  animation: slideInFromRight 1s ease-in;
+}
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid #bcbcbc;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+.showcase-form input:focus {
+  outline: none;
+}
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: var(--finance-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+  color: white;
+}
+.btn-primary {
+  background-color: var(--finance-color);
+  color: white;
+}
+.btn-dark {
+  background-color: var(--darker-color);
+  color: white;
+}
+
+// Stats
+
+.stats {
+  padding-top: 100px;
+  animation: slideInFromBottom 1s ease-in;
+}
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+  font-size: 1.17em !important;
+  font-weight: bold !important;
+}
+.stats .columns h3 {
+  font-size: 35px;
+  font-weight: bold;
+}
+.stats .columns p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.stats .columns {
+  margin: 3rem 0;
+}
+
+// Partners
+.partners .flex {
+  flex-wrap: wrap;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.partners .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease-in;
+
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  padding: 20px;
+}
+.partners .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold !important;
+}
+.partners .card:hover {
+  transform: translateY(-15px);
+}
+.partners h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+// Poradci
+
+.poradci-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+.poradci-main nav li {
+  font-size: 17px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.poradci-main .bg-light a:hover {
+  font-weight: bold !important;
+}
+.alert {
+  color: white;
+  padding: 10px 20px;
+  margin: 15px 0;
+}
+.alert-success {
+  background-color: var(--success-color);  
+  font-weight: bold;
+}
+.alert-code {
+  background-color: var(--code-color);
+}
+.poradci-main h3 {
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+code {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  font-family: monospace;
+}
+.poradci h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-block-start: 1em;
+  margin-block-end: 2em;
+}
+
+// User profile card
+
+.user-profile {
+  display: flex;
+}
+.user-profile p {
+  margin: 0;
+  padding-top: 10px;
+}
+.user-profile i {
+  padding-right: 15px;
+}
+.user-title {
+  padding-bottom: 20px;
+}
+.user-details {
+  padding: 0 15px;
+}
+.user-name {
+  color: var(--finance-color);
+  font-weight: bold;
+}
+.card-content img {
+  width: 200px;
+}
+
+// Tile card
+
+.tile .card {
+  max-width: 400px;
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+
+  h3 {
+    display: block;
+    font-size: 1.17em;
+  }
+}
+.card-padding {
+  padding: 2rem;
+}
+
+// Navbar
+
+.navbar {
+  font-size: 1.1em;
+}
+.navbar a:hover {
+  border-bottom: 2px solid white;
+  background-color: var(--finance-color) !important;
+}
+.navbar-menu {
+  align-items: center;
+}
+.navbar a:active {
+  background-color: var(--finance-color) !important;
+}
+.navbar a:focus:not(:active) {
+  background-color: var(--finance-color) !important;
+}
+
+// Footer
+.footer {
+  padding: 1rem 0 !important;
+  color: white;
+}
+.footer a {
+  color: white;
+  line-height: 1.6;
+}
+.footer .social a {
+  margin: 0 15px;
+  text-align: center;
+}
+.footer a:hover {
+  border-bottom: 0px solid white;
+  color: white;
+  background-color: var(--finance-color) !important;
+}
+.footer-menu {
+  align-items: center;
+}
+.footer a:active {
+  background-color: var(--finance-color) !important;
+}
+.footer a:focus:not(:active) {
+  background-color: var(--finance-color) !important;
+}
+.footer .navbar-item {
+  padding: 2px 0;
+}
+
+/* Animation */
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid,
+  .features-main .grid,
+  .docs-main .grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr;
+  }
+  .showcase {
+    height: auto;
+  }
+  .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .showcase-form {
+    justify-self: center;
+    margin-top: auto;
+  }
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .features-head,
+  .features-sub-head,
+  .docs-head {
+    text-align: center;
+  }
+
+  .features-head img,
+  .features-sub-head img,
+  .docs-head img {
+    justify-self: center;
+  }
+
+  .features-main .grid > *:first-child,
+  .features-main .grid > *:nth-child(2) {
+    grid-column: 1;
+  }
+}
+
+/* mobile */
+
+@media (max-width: 670px) {
+  .navbar .flex {
+    flex-direction: column;
+  }
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .navbar h1 {
+    text-align: center;
+    width: 100%;
+  }
+  .tile .card {
+    max-width: 100%;
+    left: 0;
+    margin: 0;
+  }
+  .showcase-form {
+    width: 100%;
+  }
+  .is-child h3 {
+    text-align: center;
+  }
+  .footer {
+    text-align :center;
+  }
+  .card-content img {
+    display: none;
+  }
+  .navbar-burger {
+    display: block;
+  }
+}
